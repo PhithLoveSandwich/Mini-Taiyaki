@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+body { 
+    background: var(--bg);
+    color: white;
+    font-family: "Itim", sans-serif;
+    color: #774040;
+    text-align: center;
+    padding: 20px;
+}
+
+
 img{
     border-radius: 15px;
 }
-
-body {
-    background-image: url('./product_img/BG.webp');
-    background-size: cover; /* ปรับขนาดให้เต็มจอ */
-    background-position: center; /* จัดตำแหน่งให้อยู่ตรงกลาง */
-    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
-    background-attachment: fixed; /* ทำให้พื้นหลังคงที่ขณะเลื่อนหน้าเว็บ */
-}
-
-
 .product {
     background-color: #ffffff;
     border: 1px solid #dddddd;
@@ -173,4 +174,12 @@ header a:hover{
 
 .card__button:hover {
     background: #cc5200;
+}
+
+.shop-info {
+    text-align: center; 
+    margin-top: 10px; 
+    font-size: 1.3em; 
+    color: #774040; 
+    line-height: 1.6; 
 }
