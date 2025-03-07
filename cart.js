@@ -133,11 +133,11 @@ function generateCartReceipt() {
   let receiptContent = `
       <style>
         @page {
-          size: 100mm 170mm;
+          size: 100mm 300mm;
         }
         body {
           width: 100mm;
-          height: 170mm;
+          height: 300mm;
           margin: 0;
           padding: 1px;
           font-family: Arial, sans-serif;
