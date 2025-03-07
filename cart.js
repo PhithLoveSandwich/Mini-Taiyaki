@@ -127,18 +127,17 @@ function printReceipt(title, content) {
   setTimeout(() => printWindow.print(), 500);
 }
 
-/**
- * ฟังก์ชันสร้างใบเสร็จของ Cart
- */
 function generateCartReceipt() {
+  const currentTime = new Date().toLocaleString(); // ⏰ เพิ่มวันที่และเวลาปัจจุบัน
+
   let receiptContent = `
       <style>
         @page {
-          size: 100mm 100mm;
+          size: 100mm 170mm;
         }
         body {
           width: 100mm;
-          height: 100mm;
+          height: 170mm;
           margin: 0;
           padding: 1px;
           font-family: Arial, sans-serif;
@@ -161,8 +160,9 @@ function generateCartReceipt() {
           background-color: #f2f2f2;
         }
       </style>
-      <p>SANGKONG SHOP!</p>
+      <p>MINI TAIYAKI SHOP!</p>
       <h2>Cart Receipt</h2>
+      <p><strong>Time:</strong> ${currentTime}</p> <!-- ✅ เพิ่มเวลาตรงนี้ -->
       <table>
         <thead>
           <tr>
@@ -194,8 +194,11 @@ function generateCartReceipt() {
   receiptContent += `
         </tbody>
       </table>
-      <p>Total Price: $${totalPrice}</p>
-      <p>คุณ Kays Tel.088-888-8888</p>`;
+      <p><strong>Total Price:</strong> $${totalPrice}</p>
+      <p>คุณ Jane Doe Tel.0XX-XXX-XXXX</p>
+      <p>โรงอาหารมหาวิทยาลัยราชภัฏนครปฐม ชั้นที่ 2</p>
+      <p>เบอร์โทรศัพท์: 0XX-XXX-XXXX</p>`;
+
 
   return receiptContent;
 }
